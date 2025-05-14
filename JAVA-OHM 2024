@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class LeyDeOhm {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean continuar = true;
+
+        System.out.println("Calculadora de la Ley de Ohm");
+
+        while (continuar) {
+            System.out.print("Introduce la corriente (I en amperios): ");
+            double corriente = scanner.nextDouble();
+
+            System.out.print("Introduce la resistencia (R en ohmios): ");
+            double resistencia = scanner.nextDouble();
+
+            double voltaje = corriente * resistencia;
+
+            System.out.println("El voltaje (V) es igual a: " + voltaje + " voltios");
+
+            System.out.print("¿Desea realizar otro cálculo? (S para sí, cualquier otra tecla para salir): ");
+            String respuesta = scanner.next().trim().toLowerCase();
+
+            if (!respuesta.equals("s")) {
+                continuar = false;
+            }
+        }
+
+        System.out.println("¡Hasta luego!");
+        scanner.close();
+    }
+}
