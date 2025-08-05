@@ -1,0 +1,33 @@
+public class LeyDeOhm {
+
+    public static double calcularVoltaje(double corriente, double resistencia) {
+        return corriente * resistencia;
+    }
+
+    public static double calcularCorriente(double voltaje, double resistencia) {
+        return voltaje / resistencia;
+    }
+
+    public static double calcularResistencia(double voltaje, double corriente) {
+        return voltaje / corriente;
+    }
+
+    public static void main(String[] args) {
+        // Ejemplo de uso
+        double voltaje = 12.0;
+        double corriente = 2.0;
+        double resistencia = 6.0;
+
+        // Calcular voltaje
+        double voltajeCalculado = calcularVoltaje(corriente, resistencia);
+        System.out.println("Voltaje calculado: " + voltajeCalculado);
+
+        // Calcular corriente
+        double corrienteCalculada = calcularCorriente(voltaje, resistencia);
+        System.out.println("Corriente calculada: " + corrienteCalculada);
+
+        // Calcular resistencia
+        double resistenciaCalculada = calcularResistencia(voltaje, corriente);
+        System.out.println("Resistencia calculada: " + resistenciaCalculada);
+    }
+}
